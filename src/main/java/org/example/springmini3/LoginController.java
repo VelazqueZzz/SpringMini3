@@ -17,7 +17,7 @@ public class LoginController {
     public String loginPost(
             @RequestParam String username,
             @RequestParam String password, Model model) {
-        boolean loggedIn = false;
+        boolean loggedIn = true;
         if(loggedIn){
             model.addAttribute("message","Yo are logged in");
         }

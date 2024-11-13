@@ -9,14 +9,16 @@ import org.springframework.web.context.annotation.RequestScope;
 public class LoginProcessor {
     private String username;
     private String password;
+
+
     public boolean login() {
-        String username = this.username;
-        String password = this.password;
-        if ("natalie".equals(username)&&"password".equals(password)) {
+        String username = this.getUsername();
+        String password = this.getPassword();
+        if ("natalie".equals(username) && "password".equals(password)) {
             return true;
-        }
-        else
+        } else {
             return false;
+        }
 
     }
 
@@ -36,3 +38,5 @@ public class LoginProcessor {
         this.password = password;
     }
 }
+
+
